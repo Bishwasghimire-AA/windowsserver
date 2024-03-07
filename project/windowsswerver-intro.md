@@ -1,4 +1,4 @@
-##Introduction to Windows Server
+## Introduction to Windows Server
 
 Windows Server is one of the courses for my major in ITBBA- Infrastructure and cloud services. According to our introduction lecture by our teacher Jaana (16.01.2024), this course is going to provide us with an understanding of the Windows domain as part of the working life and corporate IT environments. Throughout the course we will be learning to work on Windows-based network environments. We will be installing and working on different software according to the needs. Our exercises will be done in the Azure Lab Services (Microsoft Azure cloud learning environment). We will be requiring a remote desktop connection (RDP).
 
