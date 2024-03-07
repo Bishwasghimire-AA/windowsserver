@@ -17,7 +17,7 @@ Next, we install our windows server operating system on the Hyper V virtual mach
 * Choose custom option “Install windows only.”
 * Choose the hard disk space we created earlier,
 * And finally, Install.
-* 
+
 The installation took 15 min in the campus network to finish. Ater the installation is finished the server restarts, then we set up our administrator password and accept by finish button.
 
  ![Installing](https://github.com/bishwasghimire22/windowsserver/assets/144313610/3ac608e2-fab3-4579-bd6e-951b7f2e6c73)  
