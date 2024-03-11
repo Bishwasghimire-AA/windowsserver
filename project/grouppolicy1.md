@@ -49,31 +49,31 @@ For this task we are going to create group policy objects and link these policie
 *	DesktopsGP  Ghimire.lan  Resources  Desktops
 *	LogonPolicyGP Ghimire.lan  Resources  Servers
 
-First, login to our r Hyper-V virtual machine WindowsServer_DC, then open Tools pulldown menu in Server Manager window and choose Group Policy Management. This opens a window for group policy management.
+First, login to our  Hyper-V virtual machine WindowsServer_DC, then open Tools pulldown menu in Server Manager window and choose Group Policy Management. This opens a window for group policy management.
 
- 
-Figure 4. Group policy management window.
+ ![Group_policy_management](https://github.com/bishwasghimire22/windowsserver/assets/144313610/880da85f-5292-4f91-bcd7-073a2a4fd1d8)
 
  In the window right click group policy objects New, this opens a new GPO create window, where we fill the name as mentioned above. After creating all the GPOs our Group policy management window look like follow,
 
- 
-Figure 5. Adding new GPOs in our Group Policy Management
+![Adding_GPOs](https://github.com/bishwasghimire22/windowsserver/assets/144313610/ba60d526-11ea-44a1-836f-4046edba8d14)
 
 After this, we will link these GPO to the containers in our Active directory according to the task mentioned above. In the Group Policy Management window we select a target organizational unit, in this case Resources, right click  Link an Existing GPO, this option opens a window with all the list of GPOs we have created, from the list select required GPO, in this case ResourcesGP. Now our GPO is linked to our OU. We now follow the same method and link all the GPOs to their respective OU containers as instructed in the task. The final result looks as follow,
 
- 
-Figure 6. GPOs linked to their Organizational Units.
-Editing Group Policy
+![Linking_Gpos](https://github.com/bishwasghimire22/windowsserver/assets/144313610/a51e2472-88e5-4986-8ce8-b5cdbd90a006)
+
+## Editing Group Policy
+
 In this task, we implement the actual rules of the group practices we created in the previous task. We can create and edit a rule either direct from the branch of the target GPO object Group Policy Objects or by selecting the link that indirectly refers to the GPO object in the tree view of the Group Policy Management window. For this task we will make following changes to our GPO as required by the task,
-•	Default Domain Policy  Internet Settings/Password Policy/Turn on Script Execution (optional for this task)/ Interactive logon: Do not require CTRL+ALT+DEL (Enabled)
-•	LogonPolicyGP  Logon policy
-•	DesktopsGP  Interactive logon: Don't display last signed-in (Enabled)
-•	ResourcesGP  Link-Layer Topology Discovery
+
+*	Default Domain Policy  Internet Settings/Password Policy/Turn on Script Execution (optional for this task)/ Interactive logon: Do not require CTRL+ALT+DEL (Enabled)
+*	LogonPolicyGP  Logon policy
+*	DesktopsGP  Interactive logon: Don't display last signed-in (Enabled)
+*	ResourcesGP  Link-Layer Topology Discovery
 
 First, we make some changes to our Default Group policy, In the Group policy management window right click Default Group policy  Edit, this will open the Group policy management editor window, within the window we select, Computer Configuration  Policies  Windows Settings  Security Settings  Account Policies  Password Policy  Password must meet complexity requirements (Enabled)
 
  
-Figure 7. Editing GPO
+![GPO_editor](https://github.com/bishwasghimire22/windowsserver/assets/144313610/9f9119e1-9fa9-4cb2-89e8-131d562620bd)
 
 Next for the Internet explorer warning, Default Domain Policy  User Configuration  Preferences  Control Panel Settings  Internet Settings Right click → New → Internet Explorer 10, in the window that still opens, select New Internet Explorer 10 Properties tab Security.
 
