@@ -31,6 +31,8 @@ For this task we will define DNS service settings on your control server Windows
 The role of the DNS service in our domain is very important, because without it other machines in your domain cannot join our domain and name resolution does not work on computers that only use the DNS service of our control server.
 For the first task we will be making small changes to the DNS forwarders used by our DNS service. The DNS service was automatically installed on our WindowsServer_DC virtual machine by promoting it to the control server role in the exercise at the beginning of the course. First, we login to our WindowsServer_DC and WindowsServer_FileServer.
 In the server manager of our WindowsServer_DC, select DNS from the Tools menu. In the DNS manager window select Forwarders and choose properties. From the opened Properties window, open the Forwarders tab and select Edit. We added a new DNS name server as a new Forwarder here as requested by task.
+
+[My Github](https://github.com/bishwasghimire22/windowsserver/edit/main/project/grouppolicy1.md)
  
 Figure 1. DNS Forwarder Configuration
 For the second task we examine the role of the DNS cache as part of the use of networks, as well as what different DNS data are stored by computers in different DNS roles. 
