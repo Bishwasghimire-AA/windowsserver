@@ -41,28 +41,35 @@ In the next page we get all the Modelling summary new configured, at this stage 
 
 ## Returning the modelling result
 After we finish configuring the modelling we can choose to print or save the report, benefits of saving the produced reports are,
-•	It provides a record of the simulated configuration, which can be useful for documentation purposes, compliance audits, or future reference.
 
-•	It allows administrators to analyze the impact of the simulated Group Policy settings in detail, including their effects on specific users, computers, or organizational units.
+* 	It provides a record of the simulated configuration, which can be useful for documentation purposes, compliance audits, or future reference.
 
-•	Saved reports can be compared with actual Group Policy results or other simulated scenarios to identify discrepancies, troubleshoot issues, or verify compliance with organizational policies.
+*	It allows administrators to analyze the impact of the simulated Group Policy settings in detail, including their effects on specific users, computers, or organizational units.
 
-•	Reports can be shared with stakeholders or other team members for review, approval, or discussion of proposed Group Policy changes.
+*	Saved reports can be compared with actual Group Policy results or other simulated scenarios to identify discrepancies, troubleshoot issues, or verify compliance with organizational policies.
+
+*  	Reports can be shared with stakeholders or other team members for review, approval, or discussion of proposed Group Policy changes.
 
 We will be saving the report in the HTML format on our Desktop of our WindowsServer_DC in the following way,
 In the Group policy Management window select the model we created earlier  save Report, save it as HTML file type. The result look as follow:
  
-Figure 4. Modelling report saved as HTML file.
+ ![Report](https://github.com/user-attachments/assets/db4c6859-d96a-4ee7-aec2-18d0e83eed38)
 
 The results show directly which Group Policy Objects (GPOs) and the configurations defined in them affect Production users on Desktops.
+
 We can always make changes to the group policies in the Group Policy Management window and run our modelling again instead of having to reproduce the modelling in the wizard again. After the changes, we can run the modelling again by selecting Rerun Query from the modelling with the right mouse button,
 
-Extract from the current structure of our active directory.
+## Extract from the current structure of our active directory.
+
 Next, we create a LDAP (Lightweight Directory Access Protocol) database query for our active directory. The result should give us a summary of the users, computers, groups, and organizational units we created in our active directory. This is done in the following ways. 
-In our server manager window choose Tools → ADSI Edit. This takes us to the ADSI Edit window, choose at ADSI Edit windows by right clicking ADSI Edit and then Connect to... and ok as default. Then in the ADSI Edit window click the option Default naming context → New → Query.
+
+    In our server manager window choose Tools → ADSI Edit. This takes us to the ADSI Edit window, 
+    choose at ADSI Edit windows by right clicking ADSI Edit and then Connect to... and ok as default. 
+    Then in the ADSI Edit window click the option Default naming context → New → Query.
+
 In the new query window, we enter details as requested in the task and copy the given query phrase from the task in the query string box and save it in the root of query window by selecting OK. Now the ADSI edit windows shows the path leading to our query.
  
-Figure 5. LDAP query of our Active Directory using ADSI Edit tool.
+![LDAP query](https://github.com/user-attachments/assets/8aae7ceb-80a0-4dc3-8913-30a394872766)
 
-In the query we didn’t see the Non-Management group because of the special character “–“used in the naming of the group.
+In the query we didn’t see the Non-Management group because of the special character “–“ used in the naming of the group.
 
