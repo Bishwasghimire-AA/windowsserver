@@ -17,21 +17,29 @@ In our Hyper V manager login to WindowsServer_DC, Unfortunately I get an option 
 ![Password error](https://github.com/user-attachments/assets/08711cca-3f1e-47e3-a112-38275f583722)
 
 This must be because we need to have some special character in our password as specified in the Default group policy. So, I changed the password as needed. The new password for my WindowsServer_DC is Qwerty@789. After successfully changing the password, we log in to our domain controller. 
+
 More about this error and changed password to be discussed with the teacher.
+
 In the server manager Tools  Group Policy Management, this opens a policy management window, in the policy management window select Group Policy Modeling  Group Policy Modeling Wizard. 
+
 In the modelling wizard window, we select our domain and select user information and computer information as asked by our task,
-User  Container: OU=Production OU=Accounts, DC=ghimire, DC=lan
-Computer  Container: OU=Desktops OU=Resources DC= ghimire,DC=lan
+
+    User  Container: OU=Production OU=Accounts, DC=ghimire, DC=lan
+    
+    Computer  Container: OU=Desktops OU=Resources DC= ghimire,DC=lan
+
 We cannot select an individual user or computer. Therefore, we select the container in our active directory (in our case the organizational unit) where the target resource is. We want to model users Prod Uction and Prodnon Uction on a desktop computer, which is imaginary in the Desktops organizational unit.
  
-Figure 2. User and Computer Selection
+![User_info](https://github.com/user-attachments/assets/efde85a9-f41a-4bff-87a6-66207700d2f8)
 
 We continue to the User and Computer security page where we assign the modelling to Everyone from the list. For the WMI filter we choose “All linked filters” for both users and computers. WMI filters can be used to specify finely, for example, what characteristics a computer should have (operating system version, amount of RAM, etc.) or for group policy to be applied to it.
+
 In the next page we get all the Modelling summary new configured, at this stage we can still make changes to the selection we have made. If everything looks good, we continue by clicking the Finish button.
  
-Figure 3. Summary of modelling.
 
-Returning the modelling result
+![Summary](https://github.com/user-attachments/assets/36639842-66db-4e93-8f3d-44df15916a9d)
+
+## Returning the modelling result
 After we finish configuring the modelling we can choose to print or save the report, benefits of saving the produced reports are,
 •	It provides a record of the simulated configuration, which can be useful for documentation purposes, compliance audits, or future reference.
 
