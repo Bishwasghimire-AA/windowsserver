@@ -35,7 +35,7 @@ For the first task we will be making small changes to the DNS forwarders used by
 
 In the server manager of our WindowsServer_DC, select DNS from the Tools menu. In the DNS manager window select Forwarders and choose properties. From the opened Properties window, open the Forwarders tab and select Edit. We added a new DNS name server as a new Forwarder here as requested by task.
 
- ![ DNS Forwarder Configuration](https://github.com/user-attachments/assets/983c3173-e23b-457f-8d35-a5784140df69)
+ ![DNS Forwarder Configuration](https://github.com/user-attachments/assets/983c3173-e23b-457f-8d35-a5784140df69)
 
 For the second task we examine the role of the DNS cache as part of the use of networks, as well as what different DNS data are stored by computers in different DNS roles. 
 
@@ -51,7 +51,7 @@ For this task we create two alias names or CNAME records for the Forward zone of
 
 *	web.ghimire.lan 
 *	intra.ghimire.lan
-*	
+  
 Open DNS Manager and further view to: Forward Lookup Zones, by mouse right click in the zone area, and select from quick menu New Alias (CNAME). Here a new window is opened where we provide the details as requested by our task.
 
 ## Reverse Zone
