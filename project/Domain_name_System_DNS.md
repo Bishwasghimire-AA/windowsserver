@@ -73,7 +73,7 @@ After the process CNAME records for your domain zone, New Reverse Zone 0.208.10.
 
 By using the above command, it returns the corresponding IPv4 address of the host name.
  
-[Checking reverse zone using nslookup.](https://github.com/user-attachments/assets/c7f74f6c-64fe-458e-9447-0a7d6a2ea371)
+![Checking reverse zone using nslookup.](https://github.com/user-attachments/assets/c7f74f6c-64fe-458e-9447-0a7d6a2ea371)
 
 By using these commands, it performs a reverse DNS lookup to find the associated hostname (PTR record) for that IP address.
 
